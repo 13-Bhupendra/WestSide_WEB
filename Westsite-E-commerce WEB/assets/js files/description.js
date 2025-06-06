@@ -260,32 +260,75 @@ SSize.addEventListener("click" , ()=> {
 
 //===================####### Data Add to cart ####### ===========================
 async function getCartData() {
-    const res = await fetch(" http://localhost:3000/cart")
-    const data = await res.json()
-    return data;
+  const res = await fetch(" http://localhost:3000/cart");
+  const data = await res.json();
+  return data;
 }
 
-addToCartBtn.addEventListener("click" , async () => {
-    const data = await getCartData()
-    let existData = data.find((el)=>el.id == id)
-    
+function fetchCartData(cartData) {
+  fetch(" http://localhost:3000/cart", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(cartData),
+  })
+    .then((res) => {
+      console.log(res);
+      alert("Item added in cart !")
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
 
-    if(!existData)
-    {
-        let res = await fetch(`http://localhost:3000/womenProducts/${id}`)
-        let data = await res.json();
-        let cartData = {...data , quantity : 1}
+if (id <= 30) {
+  addToCartBtn.addEventListener("click", async () => {
+    const data = await getCartData();
+    let existData = data.find((el) => el.id == id);
 
-        fetch(" http://localhost:3000/cart" , {
-            method:"POST",
-             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(cartData),
-        })
-        .then((res)=>{alert("Item added In cart !")})
-        .catch((err)=>{console.log(err)})
+    if (!existData) {
+      let res = await fetch(`http://localhost:3000/womenProducts/${id}`);
+      let data = await res.json();
+      let cartData = { ...data, quantity: 1 };
+
+      fetchCartData(cartData);
+    } else {
+      alert("Item Already Exist !");
     }
-    else
-    {
-        alert("Item Already Exist !")
+  });
+} 
+
+else if (id >= 31 && id <= 60) {
+  addToCartBtn.addEventListener("click", async () => {
+    const data = await getCartData();
+    let existData = data.find((el) => el.id == id);
+
+    if (!existData) {
+      let res = await fetch(`http://localhost:3000/mansProducts/${id}`);
+      let data = await res.json();
+      let cartData = { ...data, quantity: 1 };
+
+      fetchCartData(cartData);
+    } else {
+      alert("Item Already Exist !");
     }
-});
+  });
+} 
+
+else if (z.get("ID") >= 41 && z.get("ID") <= 90) {
+  addToCartBtn.addEventListener("click", async () => {
+    const data = await getCartData();
+    let existData = data.find((el) => el.id == id);
+
+    if (!existData) {
+      let res = await fetch(`http://localhost:3000/kidsProducts/${id}`);
+      let data = await res.json();
+      let cartData = { ...data, quantity: 1 };
+
+      fetchCartData(cartData);
+    } else {
+      alert("Item Already Exist !");
+    }
+  });
+}
+
+

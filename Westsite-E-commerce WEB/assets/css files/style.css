@@ -272,6 +272,7 @@
 }
 
 
+
 /*======= cart Page ========*/
 .cartMainContain .ShoppingContent .buyProductProcess .Process
 {
@@ -285,7 +286,7 @@
 }
 .sec1
 {
-    width: 31%;
+    width: 33%;
 }
 
 .sec2
@@ -322,7 +323,7 @@
 }
 .productDisplayContainer  h5 
 {
-    font-size: 19px;
+    font-size: 12px;
 }
 .productDisplayContainer  p
 {

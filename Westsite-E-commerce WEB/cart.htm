@@ -73,7 +73,10 @@
                             <a href="#" class="nav-link"><i class="ri-heart-line"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link"><i class="ri-shopping-cart-2-line"></i></a>
+                            <a href="cart.htm" class="nav-link"><i class="ri-shopping-cart-2-line"></i></a>
+                            <span class="position-absolute translate-middle badge rounded-pill bg-danger" style="right: 105px;top: 15px;" id="badgeValue">
+                                0
+                            </span>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link mt-1">Sign in</a>
@@ -82,6 +85,9 @@
                 </div>
             </div>
         </nav>
+
+
+        
 
         <nav class="navbar navbar-expand-lg navbar-light" style="z-index: 1">
             <div class="container-fluid" style="padding: 0px 50px">
@@ -811,39 +817,14 @@
                 </div>
     
                 <div class="productDisplayContainerHeader pt-2 mt-5 d-none d-sm-flex align-items-center">
-                    <h6 style="width: 45%;text-align: center;">Shopping Bag</h6>
+                    <h6 style="width: 50%;text-align: center;">Shopping Bag</h6>
                     <h6 style="width: 23%;text-align: center;">Quantity</h6>
                     <h6 style="width: 25%;text-align: center;">Subtotal</h6>
                     <h6 style="width: 6%;text-align: center;font-size: 25px;"><i class="ri-delete-bin-6-fill"></i> </h6>
                 </div>
     
-                <div class="productDisplayContainer ps-0 ps-sm-3  pb-4 mt-5 mt-sm-0">
-    
-                    <div class="cartProduct pt-4 d-block d-sm-flex  align-items-center  w-100">
-                        <img src=" https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301020700DKBLUE_3.jpg?v=1747396636"
-                            alt="" height="150px"></a>
-                        <section class="sec1 ps-0 ps-sm-3 mt-3 mt-sm-0">
-                            <h6>Vendor</h6>
-                            <h5>Title</h5>
-                            <h4 style="margin-top: 10px;font-size: 20px;">00.00</h4>
-                            <p>Delivery By 4-5 days</p>
-                        </section>
-                        <section class="sec2 d-flex justify-content-center mt-4 mt-sm-0">
-                            <button data-id="1" class="decreaseBtn" id=${element.id}><i
-                                    class="ri-subtract-fill"></i></button>
-                            <span style="font-size: 15px;font-weight: bold;">Qty : 1 </span>
-                            <button data-id="1" class="increaseBtn text-dark" id=${element.id}>+</button>
-                        </section>
-                        <section class="sec2 mt-3 mt-sm-0">
-                            <h5 style="text-align: center;">00.000</h5>
-                        </section>
-                        <section class="sec3 d-flex justify-content-center">
-                            <button data-id="1" class="removeButton" id=${element.id}><i
-                                    class="ri-delete-bin-6-fill"></i></button>
-                        </section>
-                        <hr>
-                    </div>
-    
+                <div class="productDisplayContainer ps-0 ps-sm-3  pb-4 mt-5 mt-sm-0" id="productDisplayContainer">
+                    
                 </div>
             </div>
     
@@ -854,23 +835,23 @@
     
                 <section class="d-flex w-100 justify-content-between mt-5 pt-5">
                     <span>Total Item</span>
-                    <p style="font-weight: bold;">2</p>
+                    <p style="font-weight: bold;" id="totalItemIncart">0</p>
                 </section>
     
                 <section class="d-flex mt-3 w-100 justify-content-between">
                     <span>Total MRP</span>
-                    <p style="font-weight: bold;">1000</p>
+                    <p style="font-weight: bold;" id="totalMRP">0</p>
                 </section>
     
                 <section class="d-flex mt-3 w-100 justify-content-between">
                     <span>Discount on MRP</span>
-                    <p style="font-weight: bold;">100</p>
+                    <p style="font-weight: bold;" id="discountOnMRP">0</p>
                 </section>
                 <br>
                 <hr>
                 <section class="d-flex w-100 justify-content-between">
                     <span>Total Amount</span>
-                    <p style="font-weight: bold;">2000</p>
+                    <p style="font-weight: bold;" id="megaTotalAmount">0</p>
                 </section>
                 <button class="butItemBtn">Buy</button>
             </div>
@@ -966,9 +947,14 @@
           <section>
             <i class="ri-shopping-bag-4-line"></i>
             <p class="m-0">Bag</p>
+            <span class="position-absolute translate-middle badge rounded-pill bg-danger" style="left: 64%;top: 15px;font-size: 10px;" id="badgeValue">
+            0</span>
           </section>
         </a>
-      
+        
+          
+                            
+
         <a href="">
           <section>
             <i class="ri-user-3-line"></i>
@@ -978,5 +964,8 @@
       
       </div>
       <!--============Footer Menu end==============-->
+
+      <script src="assets/js files/cart.js"></script>
 </body>
 </html>
+

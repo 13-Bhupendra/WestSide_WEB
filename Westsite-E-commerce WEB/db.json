@@ -1943,6 +1943,51 @@
     }
   ],
   "cart": [
- 
+    {
+      "title": "Nuon Grey Cotton-Blend Carrot Fit Rodeo Jeans",
+      "price": 999,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300787406001_1_f49ae546-fca2-4709-98b1-3bf0f9e96ee6.jpg?v=1728044462",
+        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300787406001_2_f6ec78e6-b4c4-466f-8e13-cfb8c5d2ccac.jpg?v=1728044465",
+        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300787406001_3_5af525b6-640f-4da7-abaf-d42b32ec9e68.jpg?v=1728044468",
+        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300787406001_4_c1c88567-cf11-4d66-9502-6de201cf88f9.jpg?v=1728044479"
+      ],
+      "sku": "300787406001",
+      "description": "These grey Rodeo jeans from Nuon will make a noteworthy investment to your selection. Crafted in a carrot fit that tapers all the way down to the ankle, this five-pocket pair is designed to sit at mid-waist and is slim through the hip and thigh for modish charm.",
+      "dimensions": "Not specified",
+      "net_quantity": "1N",
+      "fit": "Comfort Fit",
+      "care_instruction": "Machine Wash",
+      "fabric_composition": "Cotton-rich fabric",
+      "model_fit": "Not specified",
+      "manufacturer": "Trent Limited, Bombay House, 24, Homi Mody Street, Fort, Mumbai – 400001",
+      "country_of_origin": "India",
+      "vendor": "Nuon",
+      "id": 32,
+      "quantity": 3
+    },
+    {
+      "title": "LOV Blue Stripe Printed Shirt",
+      "price": 1299,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301020689PERIWINKLE_1.jpg?v=1747833410",
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301020689PERIWINKLE_2.jpg?v=1747833410",
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301020689PERIWINKLE_3.jpg?v=1747833410",
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301020689PERIWINKLE_4.jpg?v=1747833410"
+      ],
+      "sku": "301020689001",
+      "description": "This blue shirt from LOV is defined by classic stripes for a timeless appeal. Crafted from quality fabric, it features a V-neck collar that leads to a button placket and full sleeves, offering a polished yet effortless look.",
+      "dimensions": "81cm",
+      "net_quantity": "1N",
+      "fit": "Regular Fit",
+      "care_instruction": "Machine Wash",
+      "fabric_composition": "100% Viscose",
+      "model_fit": "Model is 5ft 8 inches and is wearing size S",
+      "manufacturer": "Trent Limited, Bombay House, 24, Homi Mody Street, Fort, Mumbai – 400001",
+      "country_of_origin": "India",
+      "vendor": "LOV",
+      "id": 2,
+      "quantity": 2
+    }
   ]
 }

@@ -22,8 +22,11 @@
 
 @media (max-width:1130px) {
 
+  #searchInput{
+    width: 100%;
+  }
   .search i {
-    left: 34%;
+    left: 28%;
   }
 
   #img,
