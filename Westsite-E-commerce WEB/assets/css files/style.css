@@ -150,8 +150,7 @@
 }
 
 /*=======footerMenu=========*/
-.footerMenu
-{
+.footerMenu {
     height: auto;
     display: flex;
     justify-content: space-around;
@@ -161,8 +160,8 @@
     bottom: 0;
     z-index: 999;
 }
-.footerMenu a
-{
+
+.footerMenu a {
     height: 100%;
     width: 33.33%;
     text-align: center;
@@ -170,8 +169,8 @@
     color: black;
     text-decoration: none;
 }
-.footerMenu p 
-{
+
+.footerMenu p {
     font-size: 10px;
     text-align: center;
 }
@@ -274,87 +273,203 @@
 
 
 /*======= cart Page ========*/
-.cartMainContain .ShoppingContent .buyProductProcess .Process
-{
+.cartMainContain .ShoppingContent .buyProductProcess .Process {
     background-color: lightgray;
     color: black;
     padding: 5px 13px;
 }
-.cartMainContain .ShoppingContent .buyProductProcess  .ProcessType
-{
+
+.cartMainContain .ShoppingContent .buyProductProcess .ProcessType {
     font-size: 12px;
 }
-.sec1
-{
+
+.sec1 {
     width: 33%;
 }
 
-.sec2
-{
+.sec2 {
     width: 24%;
-    
+
 }
-.sec3
-{
+
+.sec3 {
     width: 8%;
 }
-.ShoppingContent
-{
-    border-right: 1px solid rgb(194, 194, 194); 
+
+.ShoppingContent {
+    border-right: 1px solid rgb(194, 194, 194);
 }
-.productDisplayContainerHeader
-{
+
+.productDisplayContainerHeader {
     border: 1px solid black;
     border-bottom: none;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: rgb(219, 219, 219);
 }
-.productDisplayContainer
-{
+
+.productDisplayContainer {
     border: 1px solid black;
     border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.productDisplayContainer h6
-{   
+
+.productDisplayContainer h6 {
     color: gray;
 }
-.productDisplayContainer  h5 
-{
+
+.productDisplayContainer h5 {
     font-size: 12px;
 }
-.productDisplayContainer  p
-{
+
+.productDisplayContainer p {
     font-size: 10px;
     color: rgb(76, 76, 76);
 }
-.decreaseBtn,.increaseBtn
-{
+
+.decreaseBtn,
+.increaseBtn {
     height: 25px;
     width: 25px;
     font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:0px 10px;
+    margin: 0px 10px;
     border: none;
     outline: none;
 }
-.removeButton
-{
+
+.removeButton {
     height: 40px;
     font-size: 25px;
     background: transparent;
     border: none;
     outline: none;
 }
-.butItemBtn
-{
+
+.butItemBtn {
     height: 40px;
     width: 100%;
     background: black;
     color: white;
     margin-top: 30px;
+}
+
+
+
+
+
+/*SignUp  /Login Page */
+.profile {
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 65%;
+}
+
+.profile h6 {
+    font-size: 15px;
+    color: gray;
+}
+
+.profileSide {
+    border-right: 1px solid black;
+    padding-top: 500px;
+}
+
+.profileSide a {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    gap: 20px;
+    font-weight: 500;
+}
+
+.profileSide a:hover {
+    color: black;
+    background: lightgray;
+}
+
+.profileSide a i {
+    font-size: 24px;
+}
+
+.error {
+    width: 85%;
+    color: #ff3333;
+    font-size: 13px;
+    min-height: 16px;
+    margin-bottom: 20px;
+}
+
+/*SignUp Form*/
+.signUpForm form label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.signUpForm form input {
+    height: 50px;
+    width: 70%;
+    padding-left: 10px;
+}
+
+#logoutBtn {
+    background-color: black;
+    color: white;
+    transition: 0.3s;
+    width: 130px;
+    height: 50px;
+}
+
+#logoutBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+#submitBtn {
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    transition: 0.3s;
+    width: 70%;
+    height: 50px;
+}
+
+#submitBtn:hover {
+    background-color: white;
+    color: black;
+}
+
+/*login form*/
+.logInForm form label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.logInForm form input {
+    height: 50px;
+    width: 70%;
+    padding-left: 10px;
+}
+
+#logInBtn {
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    transition: 0.3s;
+    width: 70%;
+    height: 50px;
+}
+
+#logInBtn:hover {
+    background-color: white;
+    color: black;
 }

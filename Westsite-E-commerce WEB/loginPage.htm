@@ -10,7 +10,7 @@
     <!--======= Main css ======-->
     <link rel="Icon" href="assets/images/siteLogo.jpg" />
     <link rel="stylesheet" href="assets/css files/style.css">
-    <link rel="stylesheet" href="assets/css files/ProductPage.css" />
+    <link rel="stylesheet" href="assets/css files/ProductPage.css">
     <link rel="stylesheet" href="assets/css files/responsive.css" />
 
     <!--=======  BS css link ======-->
@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
         integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+
 </head>
 
 <body>
@@ -74,7 +77,8 @@
                         </li>
                         <li class="nav-item">
                             <a href="cart.htm" class="nav-link"><i class="ri-shopping-cart-2-line"></i></a>
-                            <span class="position-absolute translate-middle badge rounded-pill bg-danger" style="right: 105px;top: 15px;" id="badgeValue">
+                            <span class="position-absolute translate-middle badge rounded-pill bg-danger"
+                                style="right: 105px;top: 15px;" id="badgeValue">
                                 0
                             </span>
                         </li>
@@ -87,7 +91,7 @@
         </nav>
 
 
-        
+
 
         <nav class="navbar navbar-expand-lg navbar-light" style="z-index: 1">
             <div class="container-fluid" style="padding: 0px 50px">
@@ -800,74 +804,129 @@
     </div>
     <!--======== Offcanvas end ========-->
 
-    <!--=========  Cart Main contain Start ========-->
-    <div class="container-fluid cartMainContain p-md-5 p-0 pt-4 ps-3 pe-3 mb-5">
-        <div class="row">
-            <!--Shopping  bag Side  -->
-            <div class="col-12 col-lg-7 ShoppingContent  ">
-                <h5>Shopping Bag</h5>
-    
-                <div class="buyProductProcess mt-5 ">
-                    <span class="Process" style="background-color: black;color: white;">1</span>
-                    <span class="ProcessType" style="font-weight: bold;">Bag ———</span>
-                    <span class="Process">2</span>
-                    <span class="ProcessType">Details ———</span>
-                    <span class="Process">3</span>
-                    <span class="ProcessType">Payment </span>
-                </div>
-    
-                <div class="productDisplayContainerHeader pt-2 mt-5 d-none d-sm-flex align-items-center">
-                    <h6 style="width: 50%;text-align: center;">Shopping Bag</h6>
-                    <h6 style="width: 23%;text-align: center;">Quantity</h6>
-                    <h6 style="width: 25%;text-align: center;">Subtotal</h6>
-                    <h6 style="width: 6%;text-align: center;font-size: 25px;"><i class="ri-delete-bin-6-fill"></i> </h6>
-                </div>
-    
-                <div class="productDisplayContainer ps-0 ps-sm-3  pb-4 mt-5 mt-sm-0" id="productDisplayContainer">
-                    
-                </div>
-            </div>
-    
-            <!--Total amount side -->
-            <div class="col-12 col-lg-5 mt-5 mt-lg-0 ps-5 pe-5">
-                <h5>Total Amount</h5>
-                <hr>
-    
-                <section class="d-flex w-100 justify-content-between mt-5 pt-5">
-                    <span>Total Item</span>
-                    <p style="font-weight: bold;" id="totalItemIncart">0</p>
-                </section>
-    
-                <section class="d-flex mt-3 w-100 justify-content-between">
-                    <span>Total MRP</span>
-                    <p style="font-weight: bold;" id="totalMRP">0</p>
-                </section>
-    
-                <section class="d-flex mt-3 w-100 justify-content-between">
-                    <span>Discount on MRP</span>
-                    <p style="font-weight: bold;" id="discountOnMRP">0</p>
-                </section>
-                <br>
-                <hr>
-                <section class="d-flex w-100 justify-content-between">
-                    <span>Total Amount</span>
-                    <p style="font-weight: bold;" id="megaTotalAmount">0</p>
-                </section>
-                <button class="butItemBtn" id="butItemBtn">Buy</button>
-                 <p class="error mt-3" id="BuyBtnError"></p>
+    <!--============Filter/ Sorting Header Start ===========-->
+    <div
+        class="container-fluid filter-header p-md-5 p-0 pt-4 ps-2 pe-2 d-flex justify-content-between mb-5 pb-5 mb-md-0 ">
+        <h6><a href="index.htm">Home / <span><a href="loginPage.htm" style="color: black;">Profile</a></span></h6>
+    </div>
+    <!--============Filter/ Sorting Header Start ===========-->
+
+    <!--============ Profile / Sign in / login form start=========== -->
+    <div class="container-fluid ps-5 pe-5 mb-5 pb-5">
+        <!--profile-->
+        <div class="profile d-flex align-items-center pb-5 mt-5  mt-md-0" id="profile">
+            <img src="assets/images/profileicon.png" alt="" height="100px">
+            <div class="profileDetail ps-4">
+                <h5 id="userName">Hello !</h5>
+                <button id="logoutBtn">Logout</button>
             </div>
         </div>
+
+        <div class="row justify-content-between ">
+
+            <div class="col-12 col-md-5 order-2 order-md-1 profileSide p-0 mt-5 mt-md-0 pt-5 pt-md-0">
+
+                <a href="loginPage.htm">
+                    <i class="ri-login-box-line"></i>
+                    Log In / Sign Up
+                </a>
+                <a href="index.htm" style="gap:10px">
+                    <img src="assets/images/weststyleclub.svg" alt="">
+                    WestStyleClub
+                </a>
+                <a href="https://www.google.com/maps/search/westside+store/@23.0277184,72.5613871,10.14z?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank">
+                    <i class="ri-map-pin-line"></i>
+                    Store Location
+                </a>
+                <a href="#footer">
+                    <i class="ri-phone-line"></i>
+                    Contact Us
+                </a>
+
+                <hr>
+
+                </a>
+                <a href="https://cdn.shopify.com/s/files/1/0266/6276/4597/files/Revised_T_C.pdf?v=1743758047"
+                    target="_blank">
+                    <i class="ri-team-line"></i>
+                    About Us
+                </a>
+                </a>
+                <a href="https://cdn.shopify.com/s/files/1/0266/6276/4597/files/Revised_T_C.pdf?v=1743758047"
+                    target="_blank">
+                    <i class="ri-file-list-3-line"></i>
+                    terms Of Use
+                </a>
+                </a>
+                <a href="https://cdn.shopify.com/s/files/1/0266/6276/4597/files/Revised_T_C.pdf?v=1743758047"
+                    target="_blank">
+                    <i class="ri-shield-line"></i>
+                    Privacy Prolicy
+                </a>
+            </div>
+
+            <!--signUpForm-->
+            <div class="col-12 col-md-7 order-1 order-md-2 ps-2 ps-md-5 signUpForm" id="signUpForm">
+                <h5>Sign Up</h5>
+
+                <form action="" class="mt-5">
+                    <label for="">Mobile Number</label><br>
+                    <input type="tel" placeholder="Enter Mobile Number" id="mobileNumber" maxlength="10" required>
+                    <p class="error" id="err_1"> </p>
+
+                    <label for="">Email</label><br>
+                    <input type="email" placeholder="Enter email" id="email" required>
+                    <p class="error" id="err_2"> </p>
+
+                    <label for="">Create Password</label><br>
+                    <input type="password" placeholder="Enter Password" id="password" required>
+                    <p class="error" id="err_3"></p>
+
+                    <label for="">Confirm Password</label><br>
+                    <input type="password" placeholder="Confirm Password" id="Con-password" required>
+                    <p class="error" id="err_4"></p>
+
+                    <button id="submitBtn">Sign Up</button>
+                    <p class="mt-4">Already have an account ? <a href="#logInForm" id="moveToLogin">Log in</a></p>
+                </form>
+
+            </div>
+
+            <!--LoginForm-->
+            <div class="col-12 col-md-7 order-1 order-md-2 ps-2 ps-md-5  logInForm " id="logInForm">
+                <h5>Log In</h5>
+
+                <form action="" class="mt-5">
+                    <label for="">Mobile Number / Email</label><br>
+                    <input type="text" placeholder="Enter Mobile Number or Email" id="loginMobileAndEmail"
+                        required><br><br>
+
+                    <label for="">Password</label><br>
+                    <input type="password" placeholder="Enter Password" id="loginPassword" required> <br><br>
+
+                    <label for="">Confirm Password</label><br>
+                    <input type="password" placeholder="Confirm Password" id="loginConfirmPassword" required> <br><br>
+
+                    <button id="logInBtn">Log In</button>
+                    <p class="error" id="error"> </p>
+                    <p class="mt-4">Create new account? <a href="#signUpForm" id="moveToSignUp">Sign up</a></p>
+                </form>
+
+            </div>
+
+        </div>
     </div>
-    <!--=========  Cart Main contain Start ========-->
+    <!--============ Profile / Sign in / login form end=========== -->
 
 
     <!--=============Footer start =============-->
-    <div class="container-fluid bg-light pt-4 p-0" style="overflow: hidden;">
+    <div class="container-fluid bg-light pt-4 p-0" style="overflow: hidden;" id="footer">
         <hr class="mb-5">
-    
+
         <div class="footer pt-5 pb-5">
             <div class="row">
-    
+
                 <div class="footer-list col-12 col-md-6 col-lg-3">
                     <h6>DOWNLOAD THE APP</h6>
                     <a href="https://play.google.com/store/apps/details?id=com.westside&pli=1"><img
@@ -875,7 +934,7 @@
                     <a href="https://apps.apple.com/in/app/westside/id1536381692"><img src="assets/images/IOS.svg"
                             alt=""></a>
                 </div>
-    
+
                 <ul class="footer-list col-3 d-none d-lg-block">
                     <li>
                         <h6>SHOP</h6>
@@ -886,7 +945,7 @@
                     <li> <a href="womensProductPage.htm"> Beauty</a></li>
                     <li> <a href="index.htm"> Home</a></li>
                 </ul>
-    
+
                 <ul class="footer-list col-3 d-none d-lg-block">
                     <li>
                         <h6>Sites & Stores</h6>
@@ -898,7 +957,7 @@
                     <li> <a href="#"> Sitemap</a></li>
                     <li> <a href="#"> Membership</a></li>
                 </ul>
-    
+
                 <ul class="footer-list col-12 col-md-6 col-lg-3 mt-5 mt-md-0 pt-5 pt-md-0">
                     <h6>Join Our Newsletter</h6>
                     <p style="font-size: 13px;">Get the latest updates from our stores</p>
@@ -906,7 +965,7 @@
                     <button class="subscribeBtn">SUBSCRIBE</button>
                 </ul>
                 <hr class="mt-5">
-    
+
                 <div class="footer-end d-flex justify-content-lg-between justify-content-center">
                     <section class="termAndCondition d-none d-lg-block">
                         <a href="#">TERMS & CONDITIONS</a>
@@ -914,7 +973,7 @@
                         <a href="#"> RETURN POLICY</a>
                         <a href="#">COOKIE POLICY</a>
                     </section>
-    
+
                     <section class="socialMediaBtn">
                         <a href="#"><i class="ri-twitter-x-line" style="font-size: 19px;"></i> </a>
                         <a href="#"><i class="ri-facebook-circle-fill" style="font-size: 20px;"></i></a>
@@ -922,55 +981,50 @@
                         <a href="#"><i class="ri-youtube-fill" style="font-size: 20px;"></i></a>
                     </section>
                 </div>
-    
+
             </div>
         </div>
     </div>
     <!--=============Footer End =============-->
 
     <!--============Footer Menu start==============-->
-      <div class="container-fluid footerMenu d-flex d-lg-none">
+    <div class="container-fluid footerMenu d-flex d-lg-none">
         <a href="javascript:history.back()">
-          <section>
-             <i class="ri-arrow-left-line"></i>
-            <p class="m-0">back</p>
-          </section>
+            <section>
+                <i class="ri-arrow-left-line"></i>
+                <p class="m-0">back</p>
+            </section>
         </a>
 
         <a href="index.htm">
-          <section>
-            <i class="ri-home-4-line"></i>
-            <p class="m-0">Home</p>
-          </section>
+            <section>
+                <i class="ri-home-4-line"></i>
+                <p class="m-0">Home</p>
+            </section>
         </a>
-      
+
         <a href="cart.htm">
-          <section>
-            <i class="ri-shopping-bag-4-line"></i>
-            <p class="m-0">Bag</p>
-            <span class="position-absolute translate-middle badge rounded-pill bg-danger" style="left: 64%;top: 15px;font-size: 10px;" id="footerBadgeValue">
-            0</span>
-          </section>
+            <section>
+                <i class="ri-shopping-bag-4-line"></i>
+                <p class="m-0">Bag</p>
+                <span class="position-absolute translate-middle badge rounded-pill bg-danger"
+                    style="left: 64%;top: 15px;font-size: 10px;" id="footerBadgeValue">
+                    0</span>
+            </section>
         </a>
-        
-          
+
         <a href="loginPage.htm">
-          <section>
-            <i class="ri-user-3-line"></i>
-            <p class="m-0">Profile</p>
-          </section>
+            <section>
+                <i class="ri-user-3-line"></i>
+                <p class="m-0">Profile</p>
+            </section>
         </a>
-      
-      </div>
-      <!--============Footer Menu end==============-->
 
-      <script src="assets/js files/cart.js"></script>
-      <script src="assets/js files/profileValidation.js"></script>
+    </div>
+    <!--============Footer Menu end==============-->
+
+
+    <script src="assets/js files/profileValidation.js"></script>
 </body>
+
 </html>
-
-<script>
-
-
-</script>
-

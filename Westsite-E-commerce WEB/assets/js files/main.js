@@ -462,6 +462,23 @@ searchBtn.addEventListener("click" , ()=> {
 });
 
 
+//=================== Update badge Value Only ===================
+function UpdateBadgeValue(){
+    fetch("http://localhost:3000/cart")
+    .then((res)=>res.json())
+    .then((data) =>{
+          let totalQTY = 0;
+
+      data.forEach((element) => {
+          totalQTY += element.quantity;
+
+            if(badgeValue) badgeValue.innerText =  totalQTY 
+           if(footerBadgeValue) footerBadgeValue.innerHTML = totalQTY
+      });
+    })
+    .catch((err)=>{console.log(err)})
+}
+UpdateBadgeValue();
 
 
 
@@ -475,71 +492,4 @@ searchBtn.addEventListener("click" , ()=> {
 
 
 
-
-// subscribeBtn.addEventListener("click", () => {
-//     alert("aoo")
-// });
  
-
-
-// searchBtn.addEventListener("click" , ()=> {
-//     womenProductMainSection.innerHTML = "";
-    
-
-//     let selectSearchInputValue = selectSearchInput.value ;
-//     let searchInputValue  =  searchInput.value.toLowerCase();
-
-//     if(selectSearchInputValue == "title")
-//     {
-//         fetch("http://localhost:3000/womenProducts")
-//         .then((res)=> res.json())
-//         .then((data)=>{ 
-//              data.forEach((element)=>{
-//                 if(element.title.toLowerCase().includes(searchInputValue))
-//                 {
-//                       const ProductDisplay = `
-//                         <div class="col-6 col-md-4  col-xl-3 mt-5">
-//                                 <a href="description.htm?ID=${encodeURIComponent(element.id)}"><img src=${element.image} alt="" height="450px" class="mb-3 mx-auto d-block"></a>
-//                                 <h5>${element.vendor}</h5>
-//                                 <h6>${element.title}</h6>
-//                                 <h6 style="margin-top: 15px;">₹   ${element.price}</h6>
-//                             </div>  
-//                         `
-//                     womenProductMainSection.innerHTML  += ProductDisplay
-//                 }
-//              })
-//         })
-//         .catch((err)=>{console.log(err)})
-//         .catch((err)=>{console.log(err)})
-
-//     }
-        
-//     if(selectSearchInputValue == "vendor")
-//     {
-//         fetch("http://localhost:3000/womenProducts")
-//         .then((res)=> res.json())
-//         .then((data)=>{ 
-//              data.forEach((element)=>{
-//                 if(element.vendor.toLowerCase().includes(searchInputValue))
-//                 {
-//                       const ProductDisplay = `
-//                         <div class="col-6 col-md-4  col-xl-3 mt-5">
-//                                 <a href="description.htm?ID=${encodeURIComponent(element.id)}"><img src=${element.image} alt="" height="450px" class="mb-3 mx-auto d-block"></a>
-//                                 <h5>${element.vendor}</h5>
-//                                 <h6>${element.title}</h6>
-//                                 <h6 style="margin-top: 15px;">₹   ${element.price}</h6>
-//                             </div>  
-//                         `
-//                     womenProductMainSection.innerHTML  += ProductDisplay
-//                 }
-//              })
-//         })
-//         .catch((err)=>{console.log(err)})
-//         .catch((err)=>{console.log(err)})
-
-//     }
-// });
-
-
-
-

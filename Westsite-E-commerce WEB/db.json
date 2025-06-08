@@ -1944,16 +1944,15 @@
   ],
   "cart": [
     {
-      "title": "Nuon Grey Cotton-Blend Carrot Fit Rodeo Jeans",
-      "price": 999,
+      "title": "HOP Kids Orange Text Detailed Cotton T-Shirt",
+      "price": 299,
       "image": [
-        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300787406001_1_f49ae546-fca2-4709-98b1-3bf0f9e96ee6.jpg?v=1728044462",
-        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300787406001_2_f6ec78e6-b4c4-466f-8e13-cfb8c5d2ccac.jpg?v=1728044465",
-        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300787406001_3_5af525b6-640f-4da7-abaf-d42b32ec9e68.jpg?v=1728044468",
-        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300787406001_4_c1c88567-cf11-4d66-9502-6de201cf88f9.jpg?v=1728044479"
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301021716ORANGE_1.jpg?v=1748506405",
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301021716ORANGE_2.jpg?v=1748506405",
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301021716ORANGE_3.jpg?v=1748506405"
       ],
-      "sku": "300787406001",
-      "description": "These grey Rodeo jeans from Nuon will make a noteworthy investment to your selection. Crafted in a carrot fit that tapers all the way down to the ankle, this five-pocket pair is designed to sit at mid-waist and is slim through the hip and thigh for modish charm.",
+      "sku": "301021716001",
+      "description": "HOP Kids offers this vibrant orange t-shirt made from pure cotton for all-day comfort. It features a text print on the front, along with a classic crew neck and short sleeves.",
       "dimensions": "Not specified",
       "net_quantity": "1N",
       "fit": "Comfort Fit",
@@ -1962,9 +1961,53 @@
       "model_fit": "Not specified",
       "manufacturer": "Trent Limited, Bombay House, 24, Homi Mody Street, Fort, Mumbai – 400001",
       "country_of_origin": "India",
-      "vendor": "Nuon",
-      "id": 32,
-      "quantity": 3
+      "vendor": "HOP",
+      "id": 62,
+      "quantity": 1
+    },
+    {
+      "title": "HOP Kids Light Taupe Mid-Rise Denim Shorts",
+      "price": 699,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301018588LTTAUPE_1.jpg?v=1748506404",
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301018588LTTAUPE_2.jpg?v=1748506404",
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301018588LTTAUPE_3.jpg?v=1748506405"
+      ],
+      "sku": "301018588011",
+      "description": "These light taupe denim shorts from HOP Kids are a versatile pick for everyday wear. Crafted from pure cotton, they feature a mid-rise fit with a smooth buttoned waistband, adjustable drawstrings, and belt loops for added convenience. Finished with multiple pockets, they blend comfort and function effortlessly.",
+      "dimensions": "Not specified",
+      "net_quantity": "1N",
+      "fit": "Comfort Fit",
+      "care_instruction": "Machine Wash",
+      "fabric_composition": "Cotton-rich fabric",
+      "model_fit": "Not specified",
+      "manufacturer": "Trent Limited, Bombay House, 24, Homi Mody Street, Fort, Mumbai – 400001",
+      "country_of_origin": "India",
+      "vendor": "HOP",
+      "id": 70,
+      "quantity": 1
+    },
+    {
+      "title": "Ascot Dark Grey Relaxed Fit Jeans",
+      "price": 1699,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300855166_064_1.jpg?v=1728359567",
+        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300855166_064_2.jpg?v=1728359570",
+        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300855166_064_3.jpg?v=1728359573"
+      ],
+      "sku": "300855166001",
+      "description": "Bolster your denim selection with these versatile dark grey jeans from Ascot. Carved into a breathable relaxed fit silhouette with multiple pockets for practical utility, co ordinate this lightweight pair with polo tees or printed shirts for a sleek weekend look.",
+      "dimensions": "Not specified",
+      "net_quantity": "1N",
+      "fit": "Comfort Fit",
+      "care_instruction": "Machine Wash",
+      "fabric_composition": "Cotton-rich fabric",
+      "model_fit": "Not specified",
+      "manufacturer": "Trent Limited, Bombay House, 24, Homi Mody Street, Fort, Mumbai – 400001",
+      "country_of_origin": "India",
+      "vendor": "Ascot",
+      "id": 40,
+      "quantity": 1
     },
     {
       "title": "LOV Blue Stripe Printed Shirt",
@@ -1987,7 +2030,7 @@
       "country_of_origin": "India",
       "vendor": "LOV",
       "id": 2,
-      "quantity": 2
+      "quantity": 1
     }
   ]
 }

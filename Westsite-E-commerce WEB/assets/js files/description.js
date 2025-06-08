@@ -275,6 +275,9 @@ function fetchCartData(cartData) {
       console.log(res);
       alert("Item added in cart !")
     })
+      .then(() => {
+      location.reload()
+    })
     .catch((err) => {
       console.log(err);
     });
@@ -331,4 +334,22 @@ else if (z.get("ID") >= 41 && z.get("ID") <= 90) {
   });
 }
 
+
+//=================== Update badge Value Only ===================
+function UpdateBadgeValue(){
+    fetch("http://localhost:3000/cart")
+    .then((res)=>res.json())
+    .then((data) =>{
+          let totalQTY = 0;
+
+      data.forEach((element) => {
+          totalQTY += element.quantity;
+
+            if(badgeValue) badgeValue.innerText =  totalQTY 
+           if(footerBadgeValue) footerBadgeValue.innerHTML = totalQTY
+      });
+    })
+    .catch((err)=>{console.log(err)})
+}
+UpdateBadgeValue();
 
