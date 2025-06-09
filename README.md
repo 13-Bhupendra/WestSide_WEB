@@ -52,11 +52,11 @@ WestSide_WEB/<br><br>
 │ └── main.js # JavaScript + jQuery Logic<br>
 └── img/ # Product and UI Images<br>
 
-![Screenshot 2025-06-09 090541](https://github.com/user-attachments/assets/b7ccac7c-4861-41c2-bccd-5154a896145c)
-![Screenshot 2025-06-09 090617](https://github.com/user-attachments/assets/a91d35ad-ea95-419e-acd4-2b51fe2e46d6)
-![Screenshot 2025-06-09 090634](https://github.com/user-attachments/assets/5de6dd06-8353-46fd-8dcd-8c96e451fde3)
-![Screenshot 2025-06-09 090653](https://github.com/user-attachments/assets/f11d9f3c-6cb5-421d-9ce8-1661bf5d3937)
-![Screenshot 2025-06-09 090717](https://github.com/user-attachments/assets/9ecae142-abc4-4f6f-b699-67e44d265dfe)
+![Screenshot 2025-06-09 090541](https://github.com/user-attachments/assets/b7ccac7c-4861-41c2-bccd-5154a896145c)<br><br>
+![Screenshot 2025-06-09 090617](https://github.com/user-attachments/assets/a91d35ad-ea95-419e-acd4-2b51fe2e46d6)<br><br>
+![Screenshot 2025-06-09 090634](https://github.com/user-attachments/assets/5de6dd06-8353-46fd-8dcd-8c96e451fde3)<br><br>
+![Screenshot 2025-06-09 090653](https://github.com/user-attachments/assets/f11d9f3c-6cb5-421d-9ce8-1661bf5d3937)<br><br>
+![Screenshot 2025-06-09 090717](https://github.com/user-attachments/assets/9ecae142-abc4-4f6f-b699-67e44d265dfe)<br><br>
 
 
 
