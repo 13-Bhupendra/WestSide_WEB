@@ -1942,5 +1942,29 @@
       "id": 90
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "title": "Wardrobe White Stripe Printed Shirt",
+      "price": 699,
+      "image": [
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301019909WHITEBLACK_1.jpg?v=1746701114",
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301019909WHITEBLACK_2.jpg?v=1746701114",
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301019909WHITEBLACK_3.jpg?v=1746701114",
+        "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301019909WHITEBLACK_4.jpg?v=1746701114"
+      ],
+      "sku": "301019909006",
+      "description": "This white shirt from Wardrobe is constructed from a cotton-blend fabric for ultimate comfort. Defined by stripe prints, it features a classic collar, a button-up front, and three-quarter sleeves for a tailored finish.",
+      "dimensions": "81cm",
+      "net_quantity": "1N",
+      "fit": "Regular Fit",
+      "care_instruction": "Machine Wash",
+      "fabric_composition": "100% Viscose",
+      "model_fit": "Model is 5ft 8 inches and is wearing size S",
+      "manufacturer": "Trent Limited, Bombay House, 24, Homi Mody Street, Fort, Mumbai – 400001",
+      "country_of_origin": "India",
+      "vendor": "Wardrobe",
+      "id": 20,
+      "quantity": 3
+    }
+  ]
 }
