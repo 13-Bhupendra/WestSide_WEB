@@ -1943,28 +1943,6 @@
     }
   ],
   "cart": [
-    {
-      "title": "Nuon Charcoal Rodeo Carrot Fit Jeans",
-      "price": 999,
-      "image": [
-        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300817127005_1_4f46d39b-b965-400b-812a-3a27f9f0550d.jpg?v=1728061005",
-        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300817127005_2_e0c0b629-9d2a-4107-831e-8c9419c1fd84.jpg?v=1728061012",
-        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300817127005_3_f3a4adf2-965a-4285-aab3-4801c0a9cc52.jpg?v=1728061015",
-        "https://cdn.shopify.com/s/files/1/0504/3457/2487/products/100001_300817127005_4_3c0536e6-cbcb-4bef-9891-559411f65c63.jpg?v=1728061018"
-      ],
-      "sku": "300817127001",
-      "description": "Channel urban appeal into your streetwear capsule with these charcoal Rodeo jeans from Nuon. Working an acid wash finish for modern appeal, this five-pockets design is carved into a carrot frame and looks great when teamed with a crewneck t-shirt and sneakers.",
-      "dimensions": "Not specified",
-      "net_quantity": "1N",
-      "fit": "Comfort Fit",
-      "care_instruction": "Machine Wash",
-      "fabric_composition": "Cotton-rich fabric",
-      "model_fit": "Not specified",
-      "manufacturer": "Trent Limited, Bombay House, 24, Homi Mody Street, Fort, Mumbai – 400001",
-      "country_of_origin": "India",
-      "vendor": "Nuon",
-      "id": 31,
-      "quantity": 1
-    }
+    
   ]
 }
