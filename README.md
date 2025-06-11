@@ -58,8 +58,5 @@ WestSide_WEB/<br><br>
 ![Screenshot 2025-06-09 090653](https://github.com/user-attachments/assets/f11d9f3c-6cb5-421d-9ce8-1661bf5d3937)<br><br>
 ![Screenshot 2025-06-09 090717](https://github.com/user-attachments/assets/9ecae142-abc4-4f6f-b699-67e44d265dfe)<br><br>
 
-<br>
-
-
 
 
