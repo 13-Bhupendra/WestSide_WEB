@@ -349,12 +349,54 @@
     outline: none;
 }
 
-.butItemBtn {
+.butItemBtn,.PaymentBtn,.PaymentBtnSecond {
     height: 40px;
     width: 100%;
     background: black;
     color: white;
     margin-top: 30px;
+    transition: .3s;
+}
+.butItemBtn:hover 
+{
+    color: black;
+    background-color: lightgray;
+}
+.PaymentBtn:hover 
+{
+    color: black;
+    background-color: lightgray;
+}
+.PaymentBtnSecond:hover 
+{
+    color: black;
+    background-color: lightgray;
+}
+#Payment
+{
+    display: none;
+}
+#detail
+{
+    display: none;
+}
+#PaymentSuccessFulGIF
+{
+    display: none;
+}
+
+/*Payment Detail Side */
+#detail form label
+{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#detail form input
+{
+    height: 50px;
+    width: 100%;
+    padding-left: 10px;
 }
 
 

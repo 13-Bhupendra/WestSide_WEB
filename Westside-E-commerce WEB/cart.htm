@@ -26,6 +26,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
         integrity="sha512-OQDNdI5rpnZ0BRhhJc+btbbtnxaj+LdQFeh0V9/igiEPDiWE2fG+ZsXl0JEH+bjXKPJ3zcXqNyP4/F/NegVdZg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--========= JQuery Linked =======-->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+
 </head>
 
 <body>
@@ -74,12 +78,12 @@
                         </li>
                         <li class="nav-item">
                             <a href="cart.htm" class="nav-link"><i class="ri-shopping-cart-2-line"></i></a>
-                            <span class="position-absolute translate-middle badge rounded-pill bg-danger" style="right: 105px;top: 15px;" id="badgeValue">
+                            <span class="position-absolute translate-middle badge rounded-pill bg-danger" style="right: 90px;top: 15px;" id="badgeValue">
                                 0
                             </span>
                         </li>
                         <li class="nav-item">
-                            <a href="loginPage.htm" class="nav-link mt-1">Sign in</a>
+                            <a href="loginPage.htm" class="nav-link"><i class="ri-user-3-line"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -806,43 +810,44 @@
             <!--Shopping  bag Side  -->
             <div class="col-12 col-lg-7 ShoppingContent  ">
                 <h5>Shopping Bag</h5>
-    
+            
                 <div class="buyProductProcess mt-5 ">
                     <span class="Process" style="background-color: black;color: white;">1</span>
                     <span class="ProcessType" style="font-weight: bold;">Bag ———</span>
                     <span class="Process">2</span>
-                    <span class="ProcessType">Details ———</span>
+                    <span class="ProcessType">Payment ———</span>
                     <span class="Process">3</span>
-                    <span class="ProcessType">Payment </span>
+                    <span class="ProcessType">Details </span>
+            
                 </div>
-    
+            
                 <div class="productDisplayContainerHeader pt-2 mt-5 d-none d-sm-flex align-items-center">
                     <h6 style="width: 50%;text-align: center;">Shopping Bag</h6>
                     <h6 style="width: 23%;text-align: center;">Quantity</h6>
                     <h6 style="width: 25%;text-align: center;">Subtotal</h6>
                     <h6 style="width: 6%;text-align: center;font-size: 25px;"><i class="ri-delete-bin-6-fill"></i> </h6>
                 </div>
-    
+            
                 <div class="productDisplayContainer ps-0 ps-sm-3  pb-4 mt-5 mt-sm-0" id="productDisplayContainer">
-                    
+            
                 </div>
             </div>
-    
+            
             <!--Total amount side -->
-            <div class="col-12 col-lg-5 mt-5 mt-lg-0 ps-5 pe-5">
+            <div class="col-12 col-lg-5 mt-5 mt-lg-0 ps-5 pe-5 " id="ShowTotalAmount">
                 <h5>Total Amount</h5>
                 <hr>
-    
+            
                 <section class="d-flex w-100 justify-content-between mt-5 pt-5">
                     <span>Total Item</span>
                     <p style="font-weight: bold;" id="totalItemIncart">0</p>
                 </section>
-    
+            
                 <section class="d-flex mt-3 w-100 justify-content-between">
                     <span>Total MRP</span>
                     <p style="font-weight: bold;" id="totalMRP">0</p>
                 </section>
-    
+            
                 <section class="d-flex mt-3 w-100 justify-content-between">
                     <span>Discount on MRP</span>
                     <p style="font-weight: bold;" id="discountOnMRP">0</p>
@@ -854,8 +859,118 @@
                     <p style="font-weight: bold;" id="megaTotalAmount">0</p>
                 </section>
                 <button class="butItemBtn" id="butItemBtn">Buy</button>
-                 <p class="error mt-3" id="BuyBtnError"></p>
+                <p class="error mt-3" id="BuyBtnError"></p>
             </div>
+            
+            <!--payment page-->
+            <div class="col-12 col-lg-5 mt-5 mt-lg-0 ps-5 pe-5 " id="Payment">
+                <h5>Payment</h5>
+                <hr>
+            
+                <div class="mt-5">
+                    <input type="radio" id="creditCard" name="drone" value="creditCard" checked />
+                    <img src="assets/images/creditcard.png" alt="" height="30px">
+                    <label for="creditCard">Credit/Debit Card</label>
+                </div>
+            
+                <div class="mt-3">
+                    <input type="radio" id="goolepay" name="drone" value="goolepay" />
+                    <img src="assets/images/googlepay.png" alt="" height="30px">
+                    <label for="goolepay">Google pay</label>
+                </div>
+            
+                <div class="mt-3">
+                    <input type="radio" id="phonepay" name="drone" value="phonepay" />
+                    <img src="assets/images/phonepay.png" alt="" height="30px">
+                    <label for="phonepay">Phone pay</label>
+                </div>
+            
+                <div class="mt-3">
+                    <input type="radio" id="paytm" name="drone" value="paytm" />
+                    <img src="assets/images/paytmpay.png" alt="" height="30px">
+                    <label for="paytm">Phone pay</label>
+                </div>
+            
+                <section class="d-flex w-100 justify-content-between mt-5 ">
+                    <span>Total Item</span>
+                    <p style="font-weight: bold;" id="paymentPagetotalItemIncart">0</p>
+                </section>
+            
+                <section class="d-flex mt-2 w-100 justify-content-between">
+                    <span>Total MRP</span>
+                    <p style="font-weight: bold;" id="paymentPageTotalMRP">0</p>
+                </section>
+            
+                <section class="d-flex mt-2 w-100 justify-content-between">
+                    <span>Discount on MRP</span>
+                    <p style="font-weight: bold;" id="paymentPageDiscountOnMRP">0</p>
+                </section>
+                <br>
+                <hr>
+                <section class="d-flex w-100 justify-content-between">
+                    <span>Total Amount</span>
+                    <p style="font-weight: bold;" id="paymentPagemegaTotalAmount">0</p>
+                </section>
+                <button class="PaymentBtn" id="PaymentBtn">Processed to pay</button>
+                <p class="error mt-3" id=" "></p>
+            </div>
+            
+            <!--Detail page-->
+            <div class="col-12 col-lg-5 mt-5 mt-lg-0 ps-3 pe-3 ps-sm-5 pe-sm-5 " id="detail">
+                <h5>Payment Details</h5>
+                <hr>
+            
+                <form class="mt-5">
+                    <label>Credit/Debit Card Number</label> <br>
+                    <input type="tel" placeholder="0000 0000 0000 0000" maxlength="16" id="cardNumber" required>
+                    <p class="error mt-3" id="cardError"></p>
+            
+                    <div class="row">
+                        <div class="col-6">
+                            <label>Expiry Date</label><br>
+                            <input type="text" placeholder="MM/YY" id="expiryDate" style="width: 100%;" required>
+                            <p class="error mt-3" id="DateError"></p>
+                        </div>
+            
+                        <div class="col-6">
+                            <label>CVV</label><br>
+                            <input type="text" placeholder="XXXX" id="CVVnumber" style="width: 100%;" required>
+                            <p class="error mt-3" id="CVVError"></p><br><br>
+                        </div>
+                    </div>
+                </form>
+            
+                <h5>Shipping Details</h5>
+                <hr>
+            
+                <form class="mt-5">
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <label>Full Name</label> <br>
+                            <input type="text" placeholder="Enter Full Name" id="fullName" required><br><br>
+                        </div>
+            
+                        <div class="col-12  col-sm-6 mt-3 mt-sm-0">
+                            <label>Mobile number</label><br>
+                            <input type="tel" placeholder="Enter Mobile Number " id="phoneNumber" maxlength="10" required>
+                        </div>
+                    </div>
+            
+                    <label class="mt-5 mt-sm-0">Address</label><br>
+                    <textarea placeholder="Address" class="p-3 " id="address" style="width: 100%;height: 100px;"
+                        required></textarea><br><br>
+                </form>
+                <button class="PaymentBtnSecond" id="PaymentBtnSecond">PAY</button>
+                <p class="error mt-3" id="DetailError"></p>
+            </div>
+
+            <!--payment successful GIF-->
+            <div class="col-12 col-lg-5 mt-5 mt-lg-0 ps-3 pe-3 ps-sm-5 pe-sm-5 " id="PaymentSuccessFulGIF">
+                 <img src="assets/images/paymentSuccessful.gif" alt="Payment Successful" style="width: 90%;margin: auto;" />
+                 <h5 id="paymentSuccessfulAmount" style="text-align: center;font-weight: bold;">500</h5>
+                <h3 style="text-align: center;">Payment Successful !</h3>
+            </div>
+
         </div>
     </div>
     <!--=========  Cart Main contain Start ========-->

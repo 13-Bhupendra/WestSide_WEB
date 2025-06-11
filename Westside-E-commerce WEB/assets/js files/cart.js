@@ -1,6 +1,5 @@
-const productDisplayContainer = document.getElementById(
-  "productDisplayContainer"
-);
+const productDisplayContainer = document.getElementById("productDisplayContainer");
+
 const badgeValue = document.getElementById("badgeValue");
 const footerBadgeValue = document.getElementById("footerBadgeValue");
 
@@ -8,6 +7,21 @@ const totalItemIncart = document.getElementById("totalItemIncart");
 const totalMRP = document.getElementById("totalMRP");
 const discountOnMRP = document.getElementById("discountOnMRP");
 const megaTotalAmount = document.getElementById("megaTotalAmount");
+
+const paymentPageTotalMRP = document.getElementById("paymentPageTotalMRP");
+const paymentPageDiscountOnMRP = document.getElementById("paymentPageDiscountOnMRP");
+const paymentPagemegaTotalAmount = document.getElementById("paymentPagemegaTotalAmount");
+const paymentPagetotalItemIncart =document.getElementById("paymentPagetotalItemIncart")
+
+const ShowTotalAmount = document.getElementById("ShowTotalAmount")
+const PaymentForm = document.getElementById("Payment")
+const detailForm = document.getElementById('detail')
+
+const paymentSuccessfulAmount = document.getElementById("paymentSuccessfulAmount")
+
+const span = document.createElement("span")
+const PaymentBtnSecond = document.getElementById("PaymentBtnSecond")
+
 
 const z = new URLSearchParams(window.location.search);
 let urlID = z.get("ID");
@@ -61,9 +75,16 @@ function singleProductData(element) {
 
     productDisplayContainer.innerHTML += ProductData;
     totalItemIncart.innerHTML = totalQTY;
-    totalMRP.innerText = totalQTY * el.price;
+    totalMRP.innerText =  totalQTY * el.price;
     discountOnMRP.innerText = totalMRP.innerText / 100;
     megaTotalAmount.innerText = totalMRP.innerText - discountOnMRP.innerText;
+
+    paymentPagetotalItemIncart.innerText =totalQTY
+    paymentPageTotalMRP.innerText = totalQTY * el.price
+    paymentPageDiscountOnMRP.innerText =  totalMRP.innerText / 100;
+    paymentPagemegaTotalAmount.innerText = totalMRP.innerText - discountOnMRP.innerText;
+    PaymentBtnSecond.innerHTML = `PAY  (₹${span.innerText = totalQTY * el.price})`
+    paymentSuccessfulAmount.innerText ="₹"  + totalQTY * el.price + ".00"
   });
 }
 
@@ -148,17 +169,90 @@ document.addEventListener("click", (el) => {
   }
 });
 
+
 //============ buy Item after login ===============
 function BuyItemButton() {
   document.getElementById("butItemBtn").addEventListener("click", () => {
-    alert("Product buy successfully!");
+    ShowTotalAmount.style.display = "none"
+    PaymentForm.style.display = "block"
   });
 }
 
 const isLoggedIn = localStorage.getItem("isLoggedIn");
 if (isLoggedIn === "true") {
   BuyItemButton();
-} else {
+} 
+else {
   document.getElementById("BuyBtnError").innerHTML =
     "*Login account before buy Products";
 }
+
+
+//============ Processed to pay / PayAmount btn ============
+document.getElementById("PaymentBtn").addEventListener("click" , ()=>{
+  detailForm.style.display = "block" 
+  PaymentForm.style.display = "none";
+})
+
+
+//===========Payment / Shipping Details validation ==========
+$("#PaymentBtnSecond").on("click" , function(e) {
+
+   e.preventDefault();
+  let isvalid = true;
+
+  let cardNumber = $("#cardNumber").val();
+  let expiryDate = $("#expiryDate").val();
+  let CVVnumber = $("#CVVnumber").val();
+  let phoneNumber = $("#phoneNumber").val();
+  let fullName = $("#fullName").val();
+
+  let cardNumberRegx =/^\d{16}$/;
+  let expiryDateRegx = /^(0[1-9]|1[0-2])\/\d{2}$/
+  let CVVnumberRegx = /^\d{3,4}$/;
+  let phoneNumberRegx =  /^[6-9][0-9]{9}$/;
+  let fullNameRegx = /^[a-zA-Z]{2,}(?: [a-zA-Z]{2,}){0,2}$/
+
+  if(!cardNumberRegx.test(cardNumber) ){
+    isvalid = false;
+    $("#cardError").text("*Enter valid number (16 digits)")
+  }
+
+  if( !expiryDateRegx.test(expiryDate)){
+    isvalid = false;
+    $("#DateError").text("*Enter valid Date (MM/YY)")
+  }
+
+  if(!CVVnumberRegx.test(CVVnumber) )
+  {
+     isvalid = false;
+    $("#CVVError").text("*Enter valid CVV (3-4 digits)")
+  }
+
+  if(  !phoneNumberRegx.test(phoneNumber)
+    ||   !fullNameRegx.test(fullName))
+  {
+      isvalid = false;
+  }
+
+
+    if (isvalid) {
+
+      alert("Payment is being processed. Please wait...");
+      detailForm.style.display = "none";
+       
+    const setTime = setInterval(()=> {
+        document.getElementById("PaymentSuccessFulGIF").style.display = "block";
+    } ,1000)      
+
+    setTimeout(()=> {
+        clearInterval(setTime)
+        document.getElementById("PaymentSuccessFulGIF").style.display = "none";
+        location.reload()
+    } , 5000)
+
+    } else {
+      document.getElementById("DetailError").innerText =
+        "*Please Enter Valid Inputs !";
+    }
+})
