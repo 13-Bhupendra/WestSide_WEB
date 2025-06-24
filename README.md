@@ -4,6 +4,8 @@ WestSide\_WEB is a modern **E-commerce Website** built using **HTML**, **CSS**, 
 
 It provides a complete front-end shopping experience, from product browsing to cart handling, user authentication, and a **dummy payment simulation**.
 
+## Live Preview : https://westside-web.vercel.app/
+
 ---
 
 ## 🌐 Pages & Features
